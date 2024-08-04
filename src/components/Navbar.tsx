@@ -17,6 +17,7 @@ const Navbar: React.FC = () => {
             <li><Link to="/market">Market</Link></li>
             <li><Link to="/team">Team</Link></li>
             <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/contact-list">Contacts - List</Link></li>
           </ul>
         </nav>
       </div>

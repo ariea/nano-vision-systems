@@ -10,6 +10,8 @@ import Product from './pages/Product';
 import Market from './pages/Market';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
+import ContactList from './pages/ContactList';
+import ContactForm from './pages/ContactForm';
 import './App.css';
 
 const App: React.FC = () => {
@@ -17,14 +19,15 @@ const App: React.FC = () => {
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/problems" element={<Problems />} />
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/product" element={<Product />} />
         <Route path="/market" element={<Market />} />
         <Route path="/team" element={<Team />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<ContactForm />} />
+        <Route path="/contact-list" element={<ContactList />} />
       </Routes>
       <Footer />
     </div>
