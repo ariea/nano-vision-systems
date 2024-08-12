@@ -1,0 +1,7 @@
+/* styles/SlidesContainer.css */
+.slides-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust spacing between slides as needed */
+  }
+  

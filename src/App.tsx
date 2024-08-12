@@ -13,6 +13,7 @@ import Contact from './pages/Contact';
 import ContactList from './pages/ContactList';
 import ContactForm from './pages/ContactForm';
 import './App.css';
+import Presentation from './pages/Presentation';
 
 const App: React.FC = () => {
   return (
@@ -26,8 +27,10 @@ const App: React.FC = () => {
         <Route path="/product" element={<Product />} />
         <Route path="/market" element={<Market />} />
         <Route path="/team" element={<Team />} />
+        <Route path="/presentation" element={<Presentation />} />
         <Route path="/contact" element={<ContactForm />} />
         <Route path="/contact-list" element={<ContactList />} />
+        
       </Routes>
       <Footer />
     </div>

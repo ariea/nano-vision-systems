@@ -31,7 +31,7 @@ const ContactForm: React.FC = () => {
           </p>
           <p>
             Our Email: info@nano-vision.tech<br />
-            Our Phone: (123) 456-7890
+            {/* Our Phone: (123) 456-7890 */}
           </p>
           <br /> {/* Blank line */}
           <h2>
@@ -51,17 +51,17 @@ const ContactForm: React.FC = () => {
                 required
               />
             </div>
-            <div>
-              <label htmlFor="phone" style={{ marginRight: '25px'}}>Phone</label>
-              <PhoneInput
-                id="phone"
-                international
-                defaultCountry="US"
-                value={phone}
-                onChange={(value) => setPhone(value ?? '')} // Handle undefined value
-                style={{ marginTop: '8px', verticalAlign: 'top' , width: '170px' }}
-                required
-              />
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <label htmlFor="phone" style={{ marginRight: '23px' }}>Phone</label>
+                <PhoneInput
+                  id="phone"
+                  international
+                  defaultCountry="US"
+                  value={phone}
+                  onChange={(value) => setPhone(value ?? '')} // Handle undefined value
+                  style={{ marginTop: '8px', width: '170px' }}
+                  required
+                />
             </div>
             <div>
               <label htmlFor="email" style={{ marginRight: '25px'}}>Email </label>

@@ -1,32 +1,68 @@
-// import React from 'react';
+/*
+import React, { useEffect, useState } from 'react';
+import Layout from '../components/Layout';
+import './About.css';
 
-// const Solutions: React.FC = () => {
-//   return (
-//     <div>
-//       <h1>Our Solutions</h1>
-//       <p>
-//         We introduce the Improved Nano-Rectenna (INR) technology, which offers high-resolution, low-cost, and green imaging solutions.
-//       </p>
-//       <p>
-//         Our INR technology provides better performance at a fraction of the cost compared to traditional systems.
-//       </p>
-//     </div>
-//   );
-// };
-
-// export default Solutions;
 const Solutions: React.FC = () => {
+  const [htmlContent, setHtmlContent] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch('/output_html/slide_5.html')  // Adjust the path accordingly
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.text();
+      })
+      .then(data => {
+        setHtmlContent(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error('Error fetching the HTML file:', error);
+        setError(error.message);
+        setLoading(false);
+        console.log("loading",loading);
+      });
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
     <section className="about">
       <div className="container">
-        {/* <img src={heroImage} alt="Nano Vision Systems" className="hero-image" /> */}
-        <h1>Our Solutions</h1>
-        <p>
-          We introduce the Improved Nano-Rectenna (INR) technology, which offers high-resolution, low-cost, and green imaging solutions.
-        </p>
-        <p>
-        Our INR technology provides better performance at a fraction of the cost compared to traditional systems.
-        </p>
+        
+        <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+      </div>
+    </section>
+  );
+};
+
+export default Solutions;
+*/
+import React, { useEffect, useState } from 'react';
+import Layout from '../components/Layout';
+import './About.css';
+import Slide from '../components/Slide';
+
+const Solutions: React.FC = () => {
+  //const slideIds = [1, 2, 3]; // Adjust according to your slides
+  const slideId1 = 5;
+  
+  return (
+    <section className="about">
+      <div className="container">
+        {/* <div dangerouslySetInnerHTML={{ __html: htmlContent }} /> */}
+        <Slide slideId={slideId1} />
+        
       </div>
     </section>
   );

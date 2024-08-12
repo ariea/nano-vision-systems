@@ -1,36 +1,30 @@
-// import React from 'react';
 
-// const Market: React.FC = () => {
-//   return (
-//     <div>
-//       <h1>Market Potential</h1>
-//       <p>
-//         The market for infrared and thermal imaging is growing rapidly, with increasing demand in security, defense, automotive, and consumer electronics.
-//       </p>
-//       <p>
-//         Nano Vision Systems is well-positioned to capture a significant share of this market with our innovative technology.
-//       </p>
-//     </div>
-//   );
-// };
 
-// export default Market;
+// pages/About.tsx
+import React, { useEffect, useState } from 'react';
+import Layout from '../components/Layout';
+import './About.css';
+import Slide from '../components/Slide';
 
 const Market: React.FC = () => {
+  //const slideIds = [1, 2, 3]; // Adjust according to your slides
+  const slideId1 = 8;
+  const slideId2 = 9;
+  const slideId3 = 10;
+  const slideId4 = 11;
   return (
     <section className="about">
       <div className="container">
-        {/* <img src={heroImage} alt="Nano Vision Systems" className="hero-image" /> */}
-        <h1>Market Potential</h1>
-        <p>
-          The market for infrared and thermal imaging is growing rapidly, with increasing demand in security, defense, automotive, and consumer electronics.
-        </p>
-        <p>
-          Nano Vision Systems is well-positioned to capture a significant share of this market with our innovative technology.
-        </p>
+        {/* <div dangerouslySetInnerHTML={{ __html: htmlContent }} /> */}
+        <Slide slideId={slideId1} />
+        {/* <Slide slideId={slideId2} /> */}
+        <Slide slideId={slideId3} />
+        {/* <Slide slideId={slideId4} /> */}
       </div>
     </section>
   );
 };
 
 export default Market;
+
+

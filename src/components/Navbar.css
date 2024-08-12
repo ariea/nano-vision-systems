@@ -22,4 +22,9 @@
     color: #fff;
     font-weight: bold;
   }
+
+  .navbar-logo img.logo {
+    height: 20px; /* Adjust the size as needed */
+  }
+  
   
